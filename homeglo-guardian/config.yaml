@@ -1,0 +1,33 @@
+name: Circadian Light Guardian
+version: "0.1.0"
+slug: homeglo-guardian
+description: Source-only Guardian companion; deployment adapters are not qualified
+arch:
+  - aarch64
+startup: services
+boot: auto
+init: false
+stdin: true
+hassio_api: true
+hassio_role: manager
+homeassistant_api: true
+map:
+  - config:rw
+backup_exclude:
+  - guardian-password.v1.json
+  - .guardian-password-*
+  - vault
+  - vault/*
+options:
+  enabled: false
+  brain_slug: ""
+  lab_bootstrap: false
+schema:
+  enabled: bool
+  brain_slug: str
+  lab_bootstrap: bool
+  lab_qualification_json: "str?"
+
+# Accepted immutable G0 digest, verified by the gated Lab operator after pull.
+# sha256:32b44645fe7b5d66848373536b6b8e21e685d826d1704c5ab70e04d974b5e0be
+image: ghcr.io/homeglo/circadian-light-guardian
