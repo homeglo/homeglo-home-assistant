@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Circadian Light by HomeGlo
-version: "1.4.60"
+version: "1.4.72"
 slug: circadian-light
 description: Circadian Light honors your circadian rhythm by intuitively adapting smart lights' color and brightness to your daily pattern
 url: "https://github.com/rweisbein/circadian-light-by-HomeGlo"
@@ -25,6 +25,6 @@ options:
 schema:
   product_api_origin: str?
 
-# Lab-only V_B payload digest; the gated operator verifies it after pull.
-# sha256:47125a871b62602614a4ece9b2e69e3eed92ee581fbded9492693a76cbf03e0c
+# Lab-only V1 wrapper payload digest; the gated operator verifies it after pull.
+# sha256:7e3c1a99a62ae2c1dc4510cc8b52204ffa73acc1347e917785b67e0cf56d2ac8
 image: ghcr.io/homeglo/circadian-light
