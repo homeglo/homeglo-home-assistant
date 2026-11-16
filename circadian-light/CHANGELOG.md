@@ -1,3 +1,15 @@
+## 1.4.84
+
+- Restored the 1.4.83 image recipe. Home Assistant's standard multi-architecture YAML recipe and local amd64 builds are deferred to Brain185, using Supervisor-compatible tag pins and a post-build base-digest check.
+- Lights returning after a power cut receive their current intended settings. Returning lights in the same Room share the recovery calculation.
+- Brightness calculations keep their precision until the final whole-percent light level. Room Full follows the Room's Standard lights while preserving separate Section adjustments.
+- Time Travel preserves stamped Room and Zone Color adjustments, including long Pins that cross a restart boundary.
+- Section NiteLite and BriteLite use the Room preset when the rest of that Room is off, leaving only the selected Sections on.
+- Hue Hub switches follow the revised tap and burst rules, with repeated brightness and Color steps and bounded recovery for an unmatched release. Eligible Zigbee single actions can run without waiting for their trailing summary.
+- Pin previews and feedback choose eligible lit lights in the first lit Room in the Reach.
+- The App can show when a whole-Room fade is due to finish. This reports the Room's fade clock.
+- Settings reads yield between bounded pieces of work. A frozen Brain event loop can exit for an in-place service restart, with a repeated-exit guard.
+
 ## 1.4.83
 
 - Fixed missed presses and false double presses from switches paired through a Hue Hub.
