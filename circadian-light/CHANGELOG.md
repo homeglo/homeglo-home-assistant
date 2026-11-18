@@ -1,3 +1,14 @@
+## 1.4.85
+
+- Keep ordered Manage lights edits atomic and check every operation against a pending Room move.
+- Keep admitted Contact-close Off actions through intervening actions, while respecting other open doors and the current Reach.
+- Seed Inside and Outside on fresh Homes, report Rooms that have not started, and support switch-level Also off plus bulk Control duty changes.
+- Follow current Control names and return the saved Controls basis with Undo replies.
+- Report coherent Room, Section and Main fade brightness samples and landing targets.
+- Offer Room Glo up only when that Room has its own adjustment or Pin.
+- Supply the Home's upcoming and recent timezone offset changes and save the Sun-exposure journey flag independently of the Balance journey flag.
+- Retain the accepted startup logging and architecture recipe improvements. Image and target qualification remain separate release gates.
+
 ## 1.4.84
 
 - Restored the 1.4.83 image recipe. Home Assistant's standard multi-architecture YAML recipe and local amd64 builds are deferred to Brain185, using Supervisor-compatible tag pins and a post-build base-digest check.
