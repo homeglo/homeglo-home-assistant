@@ -1,3 +1,17 @@
+## 1.4.86
+
+- Keep Brain data in the add-on's own configuration directory, with verified migration from the previous location and clearer recovery warnings.
+- Show supported power-recovery settings and recent Zigbee signal facts in device details. Place a No-Room light into a Room, or Identify it independently.
+- Lights with no usable name show a tidy name built from their id.
+- Re-check a Zigbee bulb's power-on setting when it comes back.
+- Preserve an accepted Contact-close Off through a registry gap, while respecting reopened doors and current Room membership.
+- Let periodic group updates serve healthy lights while a busy bulb keeps its own recovery work.
+- Follow Home Assistant registry changes automatically when Room light membership changes, preserving Section and Layer settings.
+- Expose the Room switch Off-after setting, show ordered Control setup reasons, and use five seconds as the default teaching-note window.
+- Let negative Balance reduce brightness below the curve minimum, including NiteLite and Pins, while preserving hard light limits.
+- Record Activity through a background store and keep related Home, Room, Section and Control views consistent.
+- Change the Return pace without jumping the current adjustment. Reset ignores tiny residual adjustments and preserves active Pins.
+
 ## 1.4.85
 
 - Keep ordered Manage lights edits atomic and check every operation against a pending Room move.
