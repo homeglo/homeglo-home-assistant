@@ -1,17 +1,19 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Circadian Light by HomeGlo
-version: "1.4.82"
+version: "1.4.87"
 slug: circadian-light
 description: Circadian Light honors your circadian rhythm by intuitively adapting smart lights' color and brightness to your daily pattern
 url: "https://github.com/rweisbein/circadian-light-by-HomeGlo"
 arch:
   - aarch64
-backup: cold
 init: false
 auth_api: true
 homeassistant_api: true
 map:
-  - config:rw
+  - type: addon_config
+    read_only: false
+  - type: homeassistant_config
+    read_only: false
 ports:
   8472/tcp: 8472
 ingress: true
@@ -28,7 +30,13 @@ schema:
 # Fresh host interface facts for safe Product API advertisement only.
 hassio_api: true
 hassio_role: default
+backup_pre: /bin/sh /usr/bin/homeglo-activity-backup
+backup_exclude:
+  - "*/activity/activity.db"
+  - "*/activity/activity.db-wal"
+  - "*/activity/activity.db-shm"
+  - "*/activity/.activity.*.tmp*"
 
-# Lab-only Update/Restore experiment; nonpromotable private arm64 payload.
-# sha256:cbe0cd92da864ab2d3634ca3fc0739ab88267804b589bb1966aa3b7226a9fe0c
+# Lab-only same-version switchover image.
+# Manifest list sha256:757ac15040bec3fd0e52ec48971dc6b8e828bf2ba9347461d3d9673d1ee1a229
 image: ghcr.io/homeglo/circadian-light
