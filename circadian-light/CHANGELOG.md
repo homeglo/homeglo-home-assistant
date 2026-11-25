@@ -1,3 +1,10 @@
+## 1.4.89
+
+- Brightness and Time Travel use the same Home-wide step size across Zones. If saved Zone counts disagree and the Home has no saved count, the ruler uses 10 steps. Your saved Zone counts stay in place.
+- Time Travel finds the next visible change faster when several Rooms are already at full brightness.
+- Your existing Hue dimmer button mappings stay in place when you update.
+- Emergency ends when you release the last Room still held in Emergency.
+
 ## 1.4.88
 
 - Emergency now covers the whole home: one hold turns every Room on full bright, and End returns each Room to what it was doing.
