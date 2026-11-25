@@ -1,3 +1,37 @@
+## 1.4.89
+
+- Brightness and Time Travel use the same Home-wide step size across Zones. If saved Zone counts disagree and the Home has no saved count, the ruler uses 10 steps. Your saved Zone counts stay in place.
+- Time Travel finds the next visible change faster when several Rooms are already at full brightness.
+- Your existing Hue dimmer button mappings stay in place when you update.
+- Emergency ends when you release the last Room still held in Emergency.
+
+### Highlights
+
+- [small] Fixes lights that could stay stuck after a late On or a scene change.
+- [small] Time Travel responds faster in large homes.
+- [small] Brightness steps feel the same in every Zone, even ones with a narrow range (after an App update).
+- [small] Emergency mode ends by itself once every Room is back to normal (after an App update).
+- [small] New homes get a simpler Hue dimmer button layout.
+- [small] The App tells you when a Brain update is ready (after an App update).
+
+## 1.4.88
+
+- Emergency now covers the whole home: one hold turns every Room on full bright, and End returns each Room to what it was doing.
+- Switch presses no longer wait behind background saves.
+- Presses right after a restart work sooner; until Home Assistant confirms a light group, lights are sent one by one.
+- Time Travel and brightness taps move to the next change you can see. Time Travel keeps working in a pinned Room that is off or has only on/off lights.
+- Set how clear or cloudy the sky is from the App, for 1, 2 or 4 hours or until tomorrow.
+- The sun's full-strength level is now 40% for everyone.
+- The App shows which Rooms and controls still need setting up, and why a sensor can't act.
+- Installs check that Rooms, Zones, schedules, Moments and controls come through an update unchanged.
+
+### Highlights
+
+- [small] Every Time Travel and Brightness tap now makes a change you can see.
+- [headline] Set how clear or cloudy the sky is from the App.
+- [small] See which Rooms and controls still need setup, and why.
+- [small] Updates keep your Rooms, Zones, schedules, Moments and switches.
+
 ## 1.4.86
 
 - Keep Brain data in the add-on's own configuration directory, with verified migration from the previous location and clearer recovery warnings.
