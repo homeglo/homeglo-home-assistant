@@ -1,5 +1,14 @@
 ## 1.4.90
 
+### Highlights
+
+- [headline] Emergency now ends gently: every Room fades back to its normal light over 10 seconds.
+- [headline] The Circadian Light app now opens right inside Home Assistant's sidebar.
+- [small] Emergency turns lights on with a quick fade instead of a jump.
+- [small] Faster reconnecting when your home's network address changes.
+- [small] History now shows what motion sensors did.
+- [small] The Brain is now a compiled build.
+
 - Emergency End fades lights back over ten seconds. Emergency Start uses the normal turn-on fade, capped at one second.
 - Open the HomeGlo panel inside Home Assistant to manage Zone order and edit Layers.
 - Use the compiled Brain on 64-bit ARM and x86 add-on images.
