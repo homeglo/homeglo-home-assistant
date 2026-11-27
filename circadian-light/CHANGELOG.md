@@ -1,3 +1,20 @@
+## 1.4.91
+
+### Highlights
+- [headline] Motion turns lights on much faster in some scenarios.
+- [small] If the Brain ever loses its saved Rooms, it puts them back from its own copy and tells you in the Circadian Light app.
+- [small] Emergency turns every light on together, and keeps retrying any light that didn't answer.
+- [small] Motion, and your own taps, try again by themselves if the lights changed underneath them.
+- [small] Holding a switch keeps working when lights are added to or removed from a Room.
+- [small] Moments show which switch button uses them.
+
+- Hue lights can turn on without waiting for the Zigbee fade in a mixed Room.
+- Emergency Start uses confirmed light groups. Follow-up checks reach lights that missed the first pass or came back online during Emergency.
+- Eligible motion, switch and App commands can retry when the light map changes before a send.
+- Switch holds keep working through light-map updates when the Room still contains the same lights.
+- Recover missing Room and Zone memory from a saved copy and show a notice in the App.
+- Moment usage shows the switch button that runs the Moment.
+
 ## 1.4.90
 
 ### Highlights
